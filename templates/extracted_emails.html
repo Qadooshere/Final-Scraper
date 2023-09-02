@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style the form container */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Style labels and input fields */
+        .form-container label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .form-container .row {
+            display: grid;
+            grid-template-columns: 1fr fr;
+            grid-column-gap: 10px;
+        }
+
+        .form-container .row label {
+            text-align: right;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Style the rectangle line for the title */
+        .form-container h1 {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the fancy button */
+        .form-container button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Google Search Results</h1>
+        <form id="search-form">
+            <div class="row">
+                <label for="query">Search Query:</label>
+                <input type="text" id="query" name="query" required>
+            </div>
+            <div class="row">
+                <label for="num_pages">Number of Pages:</label>
+                <input type="number" id="num_pages" name="num_pages" required>
+            </div>
+            <div class="row">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            <div class="row">
+                <label for="language">Language:</label>
+                <input type="text" id="language" name="language" required>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>
